@@ -80,6 +80,10 @@ function render(items) {
     return;
   }
 
+  if (compactMode) {
+    items = items.slice(0, 8);
+  }
+
   view.data = items.map(item => {
     console.log(item);
     return {
